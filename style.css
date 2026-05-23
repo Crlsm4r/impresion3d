@@ -1,0 +1,149 @@
+/* RESET */
+*{ margin: 0; padding: 0; box-sizing: border-box; }
+body{ font-family: 'Poppins', sans-serif; background: #0f172a; color: white; scroll-behavior: smooth; overflow-x: hidden; }
+
+/* HEADER */
+header{
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 50px; background: rgba(15, 23, 42, 0.9);
+    position: sticky; top: 0; backdrop-filter: blur(10px); z-index: 1000;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+}
+.logo{ display: flex; align-items: center; gap: 10px; color: cyan; }
+nav ul{ display: flex; gap: 25px; list-style: none; }
+nav ul li a{ color: white; text-decoration: none; transition: 0.3s; }
+nav ul li a:hover{ color: cyan; text-shadow: 0 0 10px cyan; }
+
+/* HERO */
+.hero{ min-height: 100vh; display: flex; justify-content: center; align-items: center; gap: 80px; padding: 40px; }
+.hero-text{ max-width: 500px; }
+.hero-text h2{ font-size: 55px; line-height: 1.1; margin-bottom: 20px; }
+.hero-text button{ 
+    margin-top: 50px; 
+    padding: 22px 50px; 
+    border: none; 
+    border-radius: 12px; 
+    background: cyan; 
+    font-size: 20px; 
+    font-weight: 700; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer; 
+    transition: 0.3s; 
+}
+.hero-text button:hover{ transform: scale(1.1); box-shadow: 0 0 40px cyan; }
+
+/* NUEVA ANIMACIÓN DE IMPRESIÓN 3D */
+.contenedor-impresora {
+    width: 250px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nozzle {
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    background: #475569;
+    clip-path: polygon(0 0, 100% 0, 70% 100%, 30% 100%);
+    z-index: 10;
+    /* Animación: movimiento lateral y subida gradual */
+    animation: nozzleX 1.5s infinite ease-in-out, nozzleY 10s infinite steps(25);
+}
+
+.nozzle::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background: cyan;
+    border-radius: 50%;
+    box-shadow: 0 0 15px cyan;
+}
+
+.pieza-3d {
+    width: 140px;
+    height: 0;
+    background: rgba(0, 255, 255, 0.15);
+    border: 2px solid cyan;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    /* Animación: crece por capas */
+    animation: growPiece 10s infinite steps(25);
+}
+
+.pieza-3d::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: cyan;
+    box-shadow: 0 0 10px cyan;
+}
+
+.base-impresion {
+    width: 240px;
+    height: 15px;
+    background: #1e293b;
+    border-radius: 4px;
+    border-bottom: 4px solid #334155;
+}
+
+/* KEYFRAMES IMPRESIÓN */
+@keyframes nozzleX {
+    0%, 100% { transform: translateX(-70px); }
+    50% { transform: translateX(70px); }
+}
+
+@keyframes nozzleY {
+    0% { bottom: 25px; }
+    100% { bottom: 185px; }
+}
+
+@keyframes growPiece {
+    0% { height: 0; }
+    100% { height: 160px; }
+}
+
+/* SECCIONES RESTANTES */
+section{ padding: 80px 10%; text-align: center; }
+h2{ font-size: 40px; margin-bottom: 50px; color: cyan; }
+
+.cards{ display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; }
+.card{ width: 280px; background: rgba(255,255,255,0.05); padding: 30px; border-radius: 20px; border: 1px solid rgba(0,255,255,0.1); transition: 0.4s; }
+.card i{ font-size: 45px; color: cyan; margin-bottom: 20px; }
+.card:hover{ transform: translateY(-15px); border-color: cyan; }
+
+.imagenes{ display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.imagenes img{ width: 320px; border-radius: 15px; transition: 0.4s; border: 2px solid transparent; }
+.imagenes img:hover{ transform: scale(1.05); border-color: cyan; }
+
+.proceso-container{ display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-bottom: 80px; }
+.paso{ background: rgba(255,255,255,0.03); padding: 30px; border-radius: 20px; border: 1px solid rgba(0,255,255,0.1); transition: 0.3s;}
+.img-proceso { width: 100%; max-width: 150px; height: auto; margin-bottom: 20px; border-radius: 15px; filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.2)); }
+.paso h3 { color: cyan; }
+
+table{ width: 100%; border-collapse: collapse; margin-top: 30px; background: rgba(255,255,255,0.02); border-radius: 15px; overflow: hidden; }
+th, td{ padding: 15px; border: 1px solid rgba(255,255,255,0.1); text-align: center; vertical-align: middle; }
+th{ color: cyan; background: rgba(0,255,255,0.05); }
+.img-tabla { width: 85px; height: 85px; object-fit: cover; border-radius: 12px; border: 1px solid cyan; box-shadow: 0 0 10px rgba(0, 255, 255, 0.3); }
+
+.contacto-info { max-width: 500px; margin: 0 auto; background: rgba(255, 255, 255, 0.05); padding: 40px; border-radius: 20px; border: 1px solid rgba(0, 255, 255, 0.2); text-align: center; }
+.contacto-info i { font-size: 50px; color: cyan; margin-bottom: 20px; }
+.dato { display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 10px; }
+.dato p { font-size: 18px; color: #cbd5e1; }
+
+@media (max-width: 768px) {
+    .hero{ flex-direction: column; text-align: center; }
+    nav ul{ position: fixed; width: 100%; height: 100vh; background: #0f172a; top: 80px; left: -100%; flex-direction: column; transition: 0.5s; }
+    #check:checked ~ ul{ left: 0; }
+}
