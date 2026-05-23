@@ -1,1 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Design & Printing | Ing. Crismar Guillén</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/94925e67a5.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-cube"></i>
+            <h1>3D DESIGN</h1>
+        </div>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn"><i class="fa-solid fa-bars"></i></label>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#info">Aprender</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="inicio">
+        <div class="hero-text">
+            <h2>DISEÑO e IMPRESIÓN 3D</h2>
+            <p>Transformamos ideas en objetos reales. Creamos modelos, animaciones y piezas físicas de alta precisión para arquitectura, medicina e industria.</p>
+            <button id="btnAnimar">Ver Animación</button>
+        </div>
+        <div class="hero-img">
+            <div class="contenedor-impresora">
+                <div class="nozzle"></div> <div class="pieza-3d"></div> <div class="base-impresion"></div> </div>
+        </div>
+    </section>
+
+    <section class="servicios" id="servicios">
+        <h2>Nuestros Servicios</h2>
+        <div class="cards">
+            <div class="card">
+                <i class="fa-solid fa-cubes"></i>
+                <h3>Modelado 3D</h3>
+                <p>Diseño de modelos tridimensionales modernos y optimizados.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-film"></i>
+                <h3>Animación</h3>
+                <p>Experiencias visuales realistas para proyectos digitales.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-vr-cardboard"></i>
+                <h3>Realidad Virtual</h3>
+                <p>Entornos inmersivos para visualización avanzada.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-layer-group"></i>
+                <h3>Impresión FDM</h3>
+                <p>Prototipado rápido y económico en plásticos técnicos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="galeria" id="galeria">
+        <h2>Galería de Proyectos</h2>
+        <div class="imagenes">
+            <img src="https://i.postimg.cc/vm1RDBtL/p1.png" alt="Proyecto 1">
+            <img src="https://i.postimg.cc/HL8KdNT9/p2.png" alt="Proyecto 2">
+            <img src="https://i.postimg.cc/3N1ft5Fn/p3.png" alt="Proyecto 3">
+        </div>
+    </section>
+
+    <section class="info-section" id="info">
+        <h2>¿Cómo funciona la Impresión 3D?</h2>
+        <div class="proceso-container">
+            <div class="paso">
+                <img src="https://i.postimg.cc/yxG0Psbt/paso1.png" class="img-proceso" alt="Diseño">
+                <h3>Diseño</h3>
+            </div>
+            <div class="paso">
+                <img src="https://i.postimg.cc/vTK5zbNS/paso2.png" class="img-proceso" alt="Slicing">
+                <h3>Slicing</h3>
+            </div>
+            <div class="paso">
+                <img src="https://i.postimg.cc/VvvjndDB/paso3.png" class="img-proceso" alt="Impresión">
+                <h3>Impresión</h3>
+            </div>
+            <div class="paso">
+                <img src="https://i.postimg.cc/j21yXtF9/paso4.png" class="img-proceso" alt="Acabado">
+                <h3>Acabado</h3>
+            </div>
+        </div>
+
+        <div class="tabla-materiales">
+            <h3>Guía Técnica de Materiales</h3>
+            <div style="overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Vista</th>
+                            <th>Material</th>
+                            <th>Características</th>
+                            <th>Aplicación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="https://i.postimg.cc/7Z7fFxjB/PLA.png" class="img-tabla" alt="PLA"></td>
+                            <td>PLA</td>
+                            <td>Biodegradable / Fácil</td>
+                            <td>Decoración</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://i.postimg.cc/BQRj787V/ABS.png" class="img-tabla" alt="ABS"></td>
+                            <td>ABS</td>
+                            <td>Resistente al calor</td>
+                            <td>Ingeniería</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://i.postimg.cc/NjT53gZd/PETG.png" class="img-tabla" alt="PETG"></td>
+                            <td>PETG</td>
+                            <td>Químicamente resistente</td>
+                            <td>Uso Industrial</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://i.postimg.cc/fRXJGw1B/RESINA.png" class="img-tabla" alt="Resina"></td>
+                            <td>Resina</td>
+                            <td>Detalle microscópico</td>
+                            <td>Joyería / Dental</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="contacto" id="contacto">
+        <h2>Contacto</h2>
+        <div class="contacto-info">
+            <i class="fa-solid fa-user-tie"></i>
+            <h3>Ing. Crismar Guillén Peraltilla</h3>
+            <div class="dato">
+                <i class="fa-solid fa-envelope"></i>
+                <p>crille.peral@gmail.com</p>
+            </div>
+            <div class="dato">
+                <i class="fa-solid fa-phone"></i>
+                <p>955707377</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Diseño 3D - Innovación en cada capa</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
